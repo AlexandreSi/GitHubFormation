@@ -8,15 +8,36 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <style>
+  .container-no {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 100px;
+  }
 </style>
 <body>
   <div style="display: flex; align-items: center; flex-direction: column;">
     <h1>Bienvenue à la formation GitHub !</h1>
     <h2>Êtes-vous prêts à entrer ?</h2>
     <div style="display: flex; flex-direction: row;">
+      <div class="container-no" id="container-no">
+        Non
+      </div>
     </div>
   </div>
 </body>
 <script>
+  const elementNo = document.getElementById('container-no')
+  elementNo.onmouseover = function() {
+    this.style.backgroundColor = 'red';
+    this.style.color = 'white';
+  };
+  elementNo.onmouseout = function() {
+    this.style.backgroundColor = 'transparent';
+    this.style.color = 'black';
+  };
 </script>
 </html>
