@@ -17,12 +17,24 @@
     border-radius: 5px;
     width: 100px;
   }
+  .container-yes {
+    font-family: sans-serif;
+    text-align: center;
+    border: 1px solid green;
+    width: 100px;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px;
+  }
 </style>
 <body>
   <div style="display: flex; align-items: center; flex-direction: column;">
     <h1>Bienvenue à la formation GitHub !</h1>
     <h2>Êtes-vous prêts à entrer ?</h2>
     <div style="display: flex; flex-direction: row;">
+      <div class="container-yes" id="container-yes">
+        Oui
+      </div>
       <div class="container-no" id="container-no">
         Non
       </div>
@@ -39,5 +51,14 @@
     this.style.backgroundColor = 'transparent';
     this.style.color = 'black';
   };
+  const elementYes = document.getElementById('container-yes')
+  elementYes.onmouseover = function() {
+    this.style.backgroundColor = 'green';
+    this.style.color = 'white';
+  }
+  elementYes.onmouseout = function() {
+    this.style.backgroundColor = 'transparent';
+    this.style.color = 'black';
+  }
 </script>
 </html>
