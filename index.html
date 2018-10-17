@@ -17,6 +17,15 @@
     border-radius: 5px;
     width: 100px;
   }
+  .container-yes {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid green;
+    border-radius: 5px;
+    width: 100px;
+  }
 </style>
 <body>
   <div style="display: flex; align-items: center; flex-direction: column;">
@@ -25,6 +34,9 @@
     <div style="display: flex; flex-direction: row;">
       <div class="container-no" id="container-no">
         Non
+      </div>
+      <div class="container-yes" id="container-yes">
+        Oui
       </div>
     </div>
   </div>
@@ -36,6 +48,16 @@
     this.style.color = 'white';
   };
   elementNo.onmouseout = function() {
+    this.style.backgroundColor = 'transparent';
+    this.style.color = 'black';
+  };
+
+  const elementYes = document.getElementById('container-yes')
+  elementYes.onmouseover = function() {
+    this.style.backgroundColor = 'green';
+    this.style.color = 'white';
+  };
+  elementYes.onmouseout = function() {
     this.style.backgroundColor = 'transparent';
     this.style.color = 'black';
   };
